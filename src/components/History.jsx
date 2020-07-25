@@ -15,6 +15,9 @@ export default function History() {
   
     const historys = useSelector(state => state.historyReducer.data);
     const columns = ["title", "event_date_utc", "flight_number", "details"];
+    if(!historys) {
+        return null;
+    }
 
     return (
         <MUIDataTable

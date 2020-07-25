@@ -11,7 +11,9 @@ export default function Payload() {
         })
     }, [])
     const columns = ["payload_id", "nationality", "manufacturer", "payload_type", "orbit"];
-
+    if (!payload) {
+        return null;
+    }
     return (
         <MUIDataTable
             data={payload}
