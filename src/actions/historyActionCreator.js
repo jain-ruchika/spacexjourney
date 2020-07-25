@@ -24,7 +24,7 @@ export const fetchHistoryError = (error) => {
 export const fetchHistory = () => {
     return async (dispatch) => {
         dispatch(fetchHistoryRequest());
-        axios.get('https:api.spacexdata.com/v3/history')
+        axios.get('/v3/history')
         .then(res => {
             dispatch(fetchHistorySuccess(res.data));
         })

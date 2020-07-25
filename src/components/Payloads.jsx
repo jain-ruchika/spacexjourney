@@ -6,7 +6,7 @@ export default function Payload() {
     const [payload, setsPayload] = useState([]);
 
     useEffect(() => {
-        axios.get('https:api.spacexdata.com/v3/payloads').then(value => {
+        axios.get('/v3/payloads').then(value => {
             setsPayload(value.data);
         })
     }, [])
